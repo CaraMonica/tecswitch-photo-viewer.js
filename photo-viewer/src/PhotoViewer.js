@@ -15,7 +15,7 @@ export const PhotoViewer = () => {
 
   return (
     <div>
-      <MainPhoto url={imageUrlList[selectedThumbnail]} onChangePhoto={setSelectedThumbnail} />
+      <MainPhoto url={imageUrlList[selectedThumbnail]} />
       <PhotoList
         imageUrlList={imageUrlList}
         onSelectThumbnail={setSelectedThumbnail}
