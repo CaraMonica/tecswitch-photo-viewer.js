@@ -14,7 +14,7 @@ export const PhotoViewer = () => {
 
   return (
     <div>
-      <img className="main-image" src={selectedUrl} alt="random" />
+      <img className="main-image" src={selectedUrl} alt="main" />
       <PhotoList imageUrlList={imageUrlList} onSelectPhoto={setSelectedUrl} />
     </div>
   );
