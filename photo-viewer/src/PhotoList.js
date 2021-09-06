@@ -1,8 +1,9 @@
 import React from "react";
+import PhotoThumbnail from "./PhotoThumbnail";
 
 const createImgListItem = (url, i, onSelectPhoto) => (
   <li className="grid-img-container" key={`photo-container${i}`}>
-    <img src={url} alt="" id={`photo${i}`} className="grid-img" onClick={() => onSelectPhoto(url)} />
+    <PhotoThumbnail url={url} id={i} onSelectPhoto={onSelectPhoto} />
   </li>
 );
 
