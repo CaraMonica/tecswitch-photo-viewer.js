@@ -1,15 +1,17 @@
 import React from "react";
 
 const PhotoThumbnail = ({ url, id, onSelectThumbnail, selectedThumbnail }) => (
-  <img
-    src={url}
-    alt="thumbnail"
-    id={`thumbnail${id}`}
-    className={`grid-img${parseInt(selectedThumbnail) === id ? " selected" : ""}`}
-    onClick={() => {
-      onSelectThumbnail(id);
-    }}
-  />
+  <li className="grid-photo-container" key={id}>
+    <img
+      src={url}
+      alt="thumbnail"
+      id={`thumbnail${id}`}
+      className={`grid-photo${parseInt(selectedThumbnail) === id ? " selected" : ""}`}
+      onClick={() => {
+        onSelectThumbnail(id);
+      }}
+    />
+  </li>
 );
 
 export default PhotoThumbnail;
