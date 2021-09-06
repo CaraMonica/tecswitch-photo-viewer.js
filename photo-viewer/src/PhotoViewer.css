@@ -1,9 +1,19 @@
 body {
-    margin: 0 5vw;
+  margin: 0 5vw;
+  font-family: 'Courier New', monospace;
 }
 
-.main-image {
+#main-image {
   width: 85%;
+  margin: 10px;
+}
+
+#main-image-container {
+  background-color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 ul {
@@ -27,7 +37,7 @@ ul {
   flex-grow: 1;
   margin: 2vmin;
   overflow: hidden;
-  border-radius: 1vmin;
+  border-radius: 0.5vmin;
 }
 
 .grid-img {
@@ -35,6 +45,10 @@ ul {
   min-width: 100%;
   object-fit: cover;
   vertical-align: bottom;
+}
+
+.grid-img.selected {
+  opacity: 0.6;
 }
 
 .photo-grid:last-child {
@@ -49,7 +63,7 @@ ul {
   .grid-img-container {
     height: auto;
     width: 100%;
-    flex: 100%;
+    flex: 40% 1;
   }
 
   .grid-img {
