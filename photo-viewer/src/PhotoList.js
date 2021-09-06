@@ -1,20 +1,16 @@
 import React from "react";
 import PhotoThumbnail from "./PhotoThumbnail";
 
-const createImgListItem = (url, i, onSelectThumbnail, selectedThumbnail) => (
-  <li className="grid-img-container" key={i}>
-    <PhotoThumbnail
-      url={url}
-      id={i}
-      onSelectThumbnail={onSelectThumbnail}
-      selectedThumbnail={selectedThumbnail}
-    />
-  </li>
-);
-
-const PhotoList = ({ onSelectThumbnail, imageUrlList, selectedThumbnail }) => (
+const PhotoList = ({ onSelectThumbnail, photoUrlList, selectedThumbnail }) => (
   <ul className="photo-grid">
-    {imageUrlList.map((url, i) => createImgListItem(url, i, onSelectThumbnail, selectedThumbnail))}
+    {photoUrlList.map((url, i) => (
+      <PhotoThumbnail
+        url={url}
+        id={i}
+        onSelectThumbnail={onSelectThumbnail}
+        selectedThumbnail={selectedThumbnail}
+      />
+    ))}
   </ul>
 );
 
