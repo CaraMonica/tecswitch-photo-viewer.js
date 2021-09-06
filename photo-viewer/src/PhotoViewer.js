@@ -3,11 +3,11 @@ import "./PhotoViewer.css";
 import PhotoList from "./PhotoList";
 import MainPhoto from "./MainPhoto";
 
-const brokenImages = [1, 24, 32, 36, 44, 47];
-const numImages = 50;
+const brokenPhotos = [1, 24, 32, 36, 44, 47];
+const numPhotos = 50;
 
-const imageUrlList = [...Array(numImages).keys()]
-  .filter(i => !brokenImages.includes(i))
+const photoUrlList = [...Array(numPhotos).keys()]
+  .filter(i => !brokenPhotos.includes(i))
   .map(i => `https://picsum.photos/id/6${i.toString().padStart(2, "0")}/1600/900.jpg`);
 
 export const PhotoViewer = () => {
@@ -15,9 +15,9 @@ export const PhotoViewer = () => {
 
   return (
     <div>
-      <MainPhoto url={imageUrlList[selectedThumbnail]} />
+      <MainPhoto url={photoUrlList[selectedThumbnail]} />
       <PhotoList
-        imageUrlList={imageUrlList}
+        photoUrlList={photoUrlList}
         onSelectThumbnail={setSelectedThumbnail}
         selectedThumbnail={selectedThumbnail}
       />

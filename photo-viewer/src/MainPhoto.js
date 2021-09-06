@@ -1,7 +1,9 @@
 import React from "react";
 
 const MainPhoto = ({ url }) => (
-  <div id="main-image-container"><img src={url} id="main-image" alt="main" /></div>
+  <div id="main-photo-container">
+    <img src={url} id="main-photo" alt="main" />
+  </div>
 );
 
 export default MainPhoto;
