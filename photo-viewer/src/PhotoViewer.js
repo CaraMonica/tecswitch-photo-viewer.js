@@ -5,15 +5,15 @@ import MainPhoto from "./MainPhoto";
 import photoUrlList from "./photoUrlList";
 
 const PhotoViewer = () => {
-  const [selectedThumbnail, setSelectedThumbnail] = useState(0);
+  const [selectedThumbnailId, setSelectedThumbnailId] = useState(0);
 
   return (
     <div>
-      <MainPhoto url={photoUrlList[selectedThumbnail]} />
+      <MainPhoto url={photoUrlList[selectedThumbnailId]} />
       <PhotoList
         photoUrlList={photoUrlList}
-        onSelectThumbnail={setSelectedThumbnail}
-        selectedThumbnail={selectedThumbnail}
+        onSelectThumbnailId={setSelectedThumbnailId}
+        selectedThumbnailId={selectedThumbnailId}
       />
     </div>
   );
