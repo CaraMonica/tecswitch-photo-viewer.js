@@ -6,7 +6,7 @@ const PhotoThumbnail = ({ url, id, onSelectThumbnail, selectedThumbnail }) => (
       src={url}
       alt="thumbnail"
       id={`thumbnail${id}`}
-      className={`grid-photo${parseInt(selectedThumbnail) === id ? " selected" : ""}`}
+      className={`grid-photo${selectedThumbnail === id ? " selected" : ""}`}
       onClick={() => {
         onSelectThumbnail(id);
       }}
